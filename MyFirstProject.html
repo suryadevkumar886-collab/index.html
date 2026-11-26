@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DR. br ambedkar ressidential school, matihani</title>
+  
+</head>
+<style>
+*{
+   margin:0px;
+   padding:0px;
+   box-sizing:border-box;
+}
+html{
+      scroll-behavior:smooth;
+}
+
+body{
+     font-family:arial, sans-serif;
+     color:#333;
+     line-height:1.6;
+}
+
+.navbar{background: #1e3a8a;
+  color: white;
+  padding: 12px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index:10;
+}
+
+.logo{
+  font-size:20px;
+  font-weight:bold;
+}
+
+.navbar nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 8px;
+  font-size: 14px;
+}
+
+.navbar nav a:hover {
+  color: #facc15;
+}
+
+.hero {
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: white;
+  text-align: center;
+  padding: 90px 20px;
+}
+.hero h1 {
+  font-size: 34px;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.btn {
+  display: inline-block;
+  background: #facc15;
+  color: #222;
+  padding: 12px 24px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.btn:hover {
+  background: #eab308;
+}
+
+.btn-light {
+  background: white;
+}
+
+.quick {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  background: #eef2ff;
+}
+
+.quick a {
+  background: white;
+  padding: 10px 18px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #1e3a8a;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+  
+  .section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.gray {
+  background: #f3f4f6;
+}
+
+.section h2 {
+  font-size: 28px;
+  color: #1e3a8a;
+  margin-bottom: 25px;
+}
+/* ===== Cards ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.card {
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+
+.tour{
+  color:white;
+  font-size:20px;
+  text-align:center;
+  height:30px;
+  background-color:blue;
+  margin-left:200px;
+  margin-right:200px;
+  border-radius:10px;
+}
+
+.photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top:20px;
+}
+
+.photos img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: 0.4s ease;
+    cursor: pointer;
+    
+}
+
+
+.photos img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    filter: brightness(1.1);
+}
+  
+  
+.house {
+  padding: 35px;
+  border-radius: 12px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.red    { background: #dc2626; }
+.blue   { background: #2563eb; }
+.green  { background: #16a34a; }
+.yellow { background: #eab308; color: #222; }
+
+.red:hover{
+  background-color:#ff0000;
+  
+}
+.blue:hover{
+  background-color:#0000ff;
+}
+.green:hover{
+  background-color:#008000;
+}
+.yellow:hover{
+  background-color:#ffff00;
+}
+
+  
+ /* ===== Forms ===== */
+.login input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+ /* ===== Notice ===== */
+.notice {
+  list-style: none;
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+}
+.notice li {
+  background: white;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-left: 5px solid #facc15;
+  border-radius: 6px;
+}
+
+ /* ===== Footer ===== */
+footer {
+  background: #1e3a8a;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+
+/* ===== Mobile ===== */
+@media (max-width: 600px) {
+  .hero h1 { font-size: 24px; }
+  .navbar { flex-direction: column; }
+  .navbar nav { margin-top: 8px; text-align: center; }
+}
+  
+
+</style>
+
+<body>
+  <header class="navbar">
+    <div class="logo">🏅Ambedkar Chhatrawas Matihani</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#academics">Academics</a>
+      <a href="#scholarship">Scholarship</a>
+      <a href="#toppers">Toppers</a>
+      <a href="#houses">Houses</a>
+      <a href="#facilities">Facilities</a>
+      <a href="#notice">Notice</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  
+    <section id="home" class="hero">
+    <h1>Welcome to Dr. br. ambedkar residential School</h1>
+    <p>class1 से 12th तक — Knowledge, Discipline और Success की शुरुआत यहाँ से</p>
+    <a href="#admission" class="btn">Admission Open 2027</a>
+    <a href="#student" class="btn btn-light">Student Login</a>
+  </section>
+  
+   <section class="quick">
+    <a href="#student">👨‍🎓 Student Portal</a>
+    <a href="#teacher">👩‍🏫 Teacher Portal</a>
+    <a href="#fees">💰 Fee Payment</a>
+    <a href="#library">📖 Digital Library</a>
+    <a href="#admission">📝 Admission</a>
+  </section>
+
+  
+  <!-- ===== PRINCIPAL MESSAGE ===== -->
+  <section class="section">
+    <h2>Principal का संदेश</h2>
+    <div class="card wide">
+      <p>"हमारा लक्ष्य हर बच्चे को अच्छी शिक्षा, अच्छे संस्कार और आगे बढ़ने का आत्मविश्वास देना है। हम मिलकर बच्चों का उज्ज्वल भविष्य बनाते हैं।"</p>
+      <b>— Principal, Dr. br. ambedkar residential school</b>
+    </div>
+  </section>
+
+   <!-- ===== NEWS & EVENTS ===== -->
+  <section class="section gray">
+    <h2>Latest News & Events</h2>
+    <div class="grid">
+      <div class="card"><h3>📰 Admission Open</h3><p>Session 2027-28 के लिए Admission शुरू हो गए हैं।</p></div>
+      <div class="card"><h3>🏆 Achievement</h3><p>हमारे छात्रों ने State Science Fair में Gold जीता।</p></div>
+      <div class="card"><h3>🎉 Annual Function</h3><p>Annual Function 25 december को होगा।</p></div>
+    </div>
+  </section>
+
+
+   <!-- ===== ABOUT ===== -->
+  <section id="about" class="section">
+    <h2>About School</h2>
+    <div class="grid">
+      <div class="card"><h3>📜 History</h3><p>हमारा स्कूल 2000 में शुरू हुआ और आज हज़ारों बच्चे यहाँ पढ़ते हैं।</p></div>
+      <div class="card"><h3>🎯 Vision</h3><p>हर बच्चे को Smart, Honest और Successful बनाना।</p></div>
+      <div class="card"><h3>🚀 Mission</h3><p>Modern शिक्षा और अच्छे संस्कार साथ-साथ देना।</p></div>
+      <div class="card"><h3>👩‍🏫 Teachers</h3><p>अनुभवी और मेहनती शिक्षकों की टीम।</p></div>
+          <div class="card"><h3>👩‍facilitys</h3><p>har class me computer ki suvidha.</p></div>
+            <div class="card"><h3>✒studies</h3><p>smartboard ki suvidha.</p></div>
+    </div>
+  </section>
+  
+    <!-- ===== ACADEMICS ===== -->
+  <section id="academics" class="section gray">
+    <h2>Academics</h2>
+    <div class="grid">
+      <div class="card"><h3>📚 Classes</h3><p>class 1 से 12th तक</p></div>
+      <div class="card"><h3>📝 Syllabus & Notes</h3><p>Class-wise Syllabus, Notes और Homework</p></div>
+      <div class="card"><h3>💻 Online Tests</h3><p>Exam Schedule, Online Test और Results</p></div>
+      <div class="card"><h3>🗓️ Timetable</h3><p>Academic Calendar और Class Timetable</p></div>
+    </div>
+  </section>
+
+
+   <!-- ===== SCHOLARSHIP ===== -->
+  <section id="scholarship" class="section">
+    <h2>Scholarship</h2>
+    <div class="grid">
+      <div class="card"><h3>🥇 Merit</h3><p>पढ़ाई में अच्छे बच्चों के लिए</p></div>
+      <div class="card"><h3>🤝 Financial Aid</h3><p>जरूरतमंद परिवारों के लिए</p></div>
+      <div class="card"><h3>⚽ Sports</h3><p>खिलाड़ियों के लिए</p></div>
+      <div class="card"><h3>🎨 Talent</h3><p>कला और संगीत प्रतिभा के लिए</p></div>
+    </div>
+  </section>
+
+ <div class="tour">
+   our school gallery
+ </div>
+ <section class="gallery">
+  
+
+    <div class="photos">
+        <img src="img1.jpg">
+        <img src="img2.jpg">
+        <img src="img3.jpg">
+        <img src="img4.jpg">
+        <img src="img5.jpg">
+        <img src="img6.jpg">
+        <img src="img7.jpg">
+        <img src="img7.jpg">
+        <img src="img8.jpg">
+        <img src="img9.jpg">
+    </div>
+</section>
+
+  <section id="toppers" class="section gray">
+    <h2>Our Toppers</h2>
+    <table>
+      <tr><th>Rank</th><th>Name</th><th>Class</th><th>Marks</th></tr>
+      <tr><td>🥇 1</td><td>ansh raj</td><td>12th</td><td>98%</td></tr>
+      <tr><td>🥈 2</td><td>amarnath kumar</td><td>12th</td><td>97%</td></tr>
+      <tr><td>🥉 3</td><td>dharamveer kr</td><td>8th</td><td>96%</td></tr>
+            <tr><td>🥉 3</td><td>prince kumar</td><td>8th</td><td>92%</td></tr>
+              <tr><td>🥉 3</td><td>rahul kumar</td><td>8th</td><td>93%</td></tr>
+    </table>
+  </section>
+  
+    <!-- ===== HOUSES ===== -->
+  <section id="houses" class="section">
+    <h2>School Houses</h2>
+    <div class="grid">
+      <div class="house red">🔴 Red House</div>
+      <div class="house blue">🔵 Blue House</div>
+      <div class="house green">🟢 Green House</div>
+      <div class="house yellow">🟡 Yellow House</div>
+    </div>
+  </section>
+
+ 
+  <!-- ===== PORTALS ===== -->
+  <section id="student" class="section gray">
+    <h2>Student & Teacher Login</h2>
+    <div class="grid">
+      <form class="card login">
+        <h3>👨‍🎓 Student Login</h3>
+        <input type="text" placeholder="Student ID">
+        <input type="password" placeholder="Password">
+        <button class="btn" type="button">Login</button>
+      </form>
+      <form class="card login" id="teacher">
+        <h3>👩‍🏫 Teacher Login</h3>
+        <input type="text" placeholder="Teacher ID">
+        <input type="password" placeholder="Password">
+        <button class="btn" type="button">Login</button>
+      </form>
+    </div>
+  </section>
+  
+  <section id="library" class="section">
+    <h2>Digital Library & Fees</h2>
+    <div class="grid">
+      <div class="card"><h3>📖 E-Books</h3><p>NCERT Books free, PDF free, Previous Year Papers free </p></div>
+      <div class="card" id="fees"><h3>💰 Online Fees</h3><p>Fee Payment no fees, Receipt और Payment History no any payment</p></div>
+      
+       <div class="card" id="fees"><h3>💰hostelfees</h3><p>🏠 Enjoy comfortable, clean and spacious rooms with completely free accommodation for all students! 🛏️❤️</p></div>
+        </div>
+               <div class="card" id="fees"><h3>💰food fees</h3><p>🍽️ Our hostel provides free, fresh, hygienic and nutritious meals every day. Students enjoy delicious breakfast, lunch and dinner prepared with care, ensuring good health, energy and comfort throughout their academic journey. 🥗❤️</p></div>
+  </section>
+
+
+   <!-- ===== ADMISSION ===== -->
+  <section id="admission" class="section gray">
+    <h2>Online Admission</h2>
+    <form class="card wide login">
+      <input type="text" placeholder="Student का नाम">
+      <input type="text" placeholder="Parent का नाम">
+      <input type="text" placeholder="Class जिसमें Admission चाहिए">
+      <input type="tel" placeholder="Mobile Number">
+      <button class="btn" type="button">Submit</button>
+    </form>
+  </section>
+
+  
+  
+    <!-- ===== FACILITIES ===== -->
+  <section id="facilities" class="section">
+    <h2>School Facilities</h2>
+    <div class="grid small">
+      <div class="card">🖥️ Smart Classroom</div>
+      <div class="card">🔬 Science Lab</div>
+      <div class="card">💻 Computer Lab</div>
+      <div class="card">📚 Library</div>
+      <div class="card">🏃 Playground</div>
+      
+      <div class="card">📹 CCTV</div>
+      <div class="card">🩺 Medical Room</div>
+    </div>
+  </section>
+
+   <!-- ===== NOTICE BOARD ===== -->
+  <section id="notice" class="section gray">
+    <h2>Notice Board</h2>
+    <ul class="notice">
+      <li>📌 Exam Schedule जारी हो गया है।</li>
+      <li>📌 25 दिसंबर को School बंद रहेगा।</li>
+      <li>📌 Quiz Competition के लिए Registration शुरू।</li>
+    </ul>
+  </section>
+  
+  
+   <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <div class="card wide">
+      <p>📍 Address: Main Road, gaya to aurangabad matihani</p>
+      <p>📞 Phone: +91 xxxxxxxxxx</p>
+      <p>✉️ Email: info@babasaheb.com</p>
+    </div>
+  </section>
+  
+    <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© 2026 dr. br. ambedkar aawasiy vidyalay matibani, gayani| All Rights Reserved</p>
+  </footer>
+</body>
+
+</html>
